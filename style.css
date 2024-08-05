@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*
+MENSAJE SECRETO: 
+fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!
+*/
+
+:root {
+    --color-primario: #F3F5FC; 
+    --color-secundario: #0A3871;
+    --color-terciario: #ffffff;
+    --color-boton-hover: #D8DFE8;
+    --color-strong: #343A40;
+    --color-regular: #868E96;
+    --color-resultado: #495057;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: var(--color-primario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 0 0 0;
+}
+
+.header {
+    margin: 0 0 5rem 2.75rem;
+}
+
+.container {
+    display: flex;
+    gap: 80px;
+    flex: 1;
+    margin: 0 2.5rem 4.5rem 2.5rem;
+}
+
+.container__encriptador {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+}
+
+.encriptador__entrada {
+    width: 100%;
+    flex: 1;
+    color: var(--color-secundario);
+    font-size: 2rem;
+    resize: none;
+    background-color: var(--color-primario);
+    border-style: none;
+    line-height: 150%;
+}
+
+.encriptador__entrada::placeholder {
+    color: var(--color-secundario);
+}
+
+.encriptador__entrada:focus {
+    border-color: var(--color-terciario);
+    outline-color: var(--color-terciario);
+}
+
+.encriptador__nota {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--color-regular);
+}
+
+.encriptador__nota__advertencia {
+    font-size: 0.75rem;
+}
+
+.encriptador__botones {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.boton__regular {
+    border-radius: 24px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    cursor: pointer;
+    background: none;
+    flex: 1;
+}
+
+#encriptar {
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+}
+
+#desencriptar:hover, #copiar:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.oculto {
+    display: none;
+}
+
+.container__resultado {
+    background: var(--color-terciario);
+    border-radius: 2rem;
+    box-shadow: 0px 24px 2rem -8px rgba(0, 0, 0, 0.08);
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 20%;
+}
+
+.container__resultado__subtitulo {
+    font-size: 1.5rem;
+    color: var(--color-strong);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container__resultado__info {
+    font-size: 1rem;
+    color: var(--color-resultado);
+    text-align: center;
+}
+
+#resultado_encriptado {
+    font-size: 1.5rem;
+    color: var(--color-resultado);
+    line-height: 150%;
+    width: 100%;
+    flex-wrap: wrap;
+    height: fit-content;
+    word-break: break-word;
+}
+
+#copiar {
+    width: 100%;
+}
+
+.footer {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+@media (max-width: 780px) {
+    .header {
+        margin: 0 0 0 2.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 7.25rem;
+        gap: 4rem;
+    }
+
+    .container__encriptador {
+        width: 100%;
+    }
+
+    .encriptador__entrada {
+        min-height: 40vh;
+        max-height: fit-content;
+    }
+
+    .container__resultado {
+        min-width: 100%;
+    }
+
+    .container_resultado_imagen {
+        display: none;
+    }
+}
+
+@media (max-width: 440px) {
+    body {
+        padding-top: 23.97px;
+    }
+
+    .header {
+        margin: 0 0 0 1rem;
+    }
+
+    .container {
+        margin: 3.5rem 1rem 1.5rem 1rem;
+    }
+
+    .encriptador__botones {
+        flex-direction: column;
+    }
+}
+
+
+

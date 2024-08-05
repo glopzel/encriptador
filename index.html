@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="assets/logo.png" alt="logo de alura">
+    </header>
+
+    <main class="container">
+        <section class="container__encriptador">
+            <textarea class="encriptador__entrada" name="" id="encriptador" placeholder="Ingrese el texto aquí"></textarea>
+
+            <div class="encriptador__nota">
+                <img src="assets/exclamacion.svg" alt="signo de exclamación">
+                <p class="encriptador__nota__advertencia">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="encriptador__botones">
+                <button onclick="encriptarTexto()" id="encriptar" class="boton__regular">Encriptar</button>
+                <button onclick="desencriptarTexto()" id="desencriptar" class="boton__regular inactivo">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="container__resultado">
+            <div>
+                <img class="container_resultado_imagen" src="assets/personaje.png" alt="personaje mirando por una lupa">
+                <div class="container__resultado__texto">
+                    <h2 class="container__resultado__subtitulo">Ningún mensaje fue encontrado</h2>
+                    <p class="container__resultado__info">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <p id="resultado_encriptado" class="oculto"></p>
+            </div>
+            
+            <div>
+                <button onclick="copiarTexto()" id="copiar" class="boton__regular oculto">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>A. Lopez, 2024.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
